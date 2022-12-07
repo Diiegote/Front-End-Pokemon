@@ -88,7 +88,7 @@ export default function Home() {
        
 
           
-      <select defaultValue="Order"
+      <select defaultValue="Order-AZ"
         onChange={e => handleOrderAZ(e)}>
         <option disabled >Order-AZ</option>
         <option value='A-Z'>A-Z</option>
