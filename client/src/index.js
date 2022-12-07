@@ -6,6 +6,9 @@ import reportWebVitals from './reportWebVitals';
 import { Provider } from 'react-redux';
 import { BrowserRouter } from 'react-router-dom';
 import store from './Redux/store/index';
+import axios from 'axios'
+// axios.defaults.baseURL="http://localhost:3001";
+axios.defaults.baseURL="https://back-end-pokemon-production.up.railway.app/";
 
 ReactDOM.render(
   <Provider store={store}>

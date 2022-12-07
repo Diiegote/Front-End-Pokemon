@@ -14,7 +14,7 @@ export const ELIMINAR ="ELIMINAR"
 
 export function getPokemons() {
   return async function (dispatch) {
-    let json = await axios.get("http://localhost:3001/pokemons")
+    let json = await axios.get("/pokemons")
     return dispatch({
       type: GET_POKEMONS,
       payload: json.data
@@ -25,7 +25,7 @@ export function getPokemons() {
 
 export const getPokemonsId=(id)=>async (dispatch)=>{
   try {
-     let json= await axios(`http://localhost:3001/pokemon/${id}`)
+     let json= await axios(`/pokemon/${id}`)
      return dispatch(
        {type:GET_ID,payload:json.data})
      
@@ -42,7 +42,7 @@ export function getTypes(payload) {
 }
 export function getAllTypes() {
   return async function (dispatch) {
-    let json = await axios("http://localhost:3001/type")
+    let json = await axios("/type")
     return dispatch({
       type: GET_ALL_TYPES,
       payload: json.data
@@ -51,7 +51,7 @@ export function getAllTypes() {
 }
 export function postPokemons(payload) {
   return async function () {
-    let json = await axios.post("http://localhost:3001/pokemons", payload)
+    let json = await axios.post("/pokemons", payload)
     return json
   }
 }
@@ -64,7 +64,7 @@ export function postPokemons(payload) {
 export function getPokemonsByName(name) {
   return async function (dispatch) {
     try {
-      let json = await axios(`http://localhost:3001/pokemons?name=${name}`)
+      let json = await axios(`/pokemons?name=${name}`)
       return dispatch({
         type: GET_POKEMONS_NAME,
         payload: json.data
@@ -100,7 +100,7 @@ export function getFilterCreate(payload) {
 
 export const eliminar= (id)=> async (dispatch)=>{
   try {
-    const eliminar = await axios.delete(`http://localhost:3001/pokemons/${id}`);
+    const eliminar = await axios.delete(`/pokemons/${id}`);
     return dispatch({
       type:ELIMINAR , payload:eliminar.data
     });
@@ -110,7 +110,7 @@ export const eliminar= (id)=> async (dispatch)=>{
 }
 export const editar= (id,input)=> async (dispatch)=>{
   try {
-    const editar = await axios.put(`http://localhost:3001/pokemons/${id}`,input);
+    const editar = await axios.put(`/pokemons/${id}`,input);
     return dispatch({
       type:ELIMINAR , payload:editar.data
     });
