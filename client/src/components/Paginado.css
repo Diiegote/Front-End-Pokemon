@@ -1,0 +1,28 @@
+.paginado{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    padding-bottom: 3rem;
+    padding-top: 6rem;
+    margin: 0 auto;
+ }
+ .paginado button{
+    width: 35px;
+    margin: 7px;
+    border-radius: 25px;
+    background-color: rgb(196, 73, 73);
+    cursor: pointer;
+    color: black;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+ }
+  input[type=button]{
+  border-radius: 25px;
+  width: 23px;
+  margin-right: 2rem;
+  overflow: none;
+  border: transparent;
+  color: rgb(0, 0, 0);
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+  font-size: large;
+ } 
