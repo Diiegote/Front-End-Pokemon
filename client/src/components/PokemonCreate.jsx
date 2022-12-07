@@ -247,8 +247,8 @@ export default function PokemonCreate() {
           {errors.height && <span className="errorForm">{errors.height}</span>}
 
           <div className="opciones">
-            <select defaultValue="Types" onChange={(e) => handleSelect(e)}>
-            <option disabled >Types</option>
+            <select defaultValue="All-Types" onChange={(e) => handleSelect(e)}>
+            <option disabled >All-Types</option>
               {allTypes.map((t) => (
                 <option value={t.name}> {t.name}</option>
               ))}
