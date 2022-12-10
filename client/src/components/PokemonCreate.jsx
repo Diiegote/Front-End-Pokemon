@@ -250,13 +250,13 @@ export default function PokemonCreate() {
             <select defaultValue="All-Types" onChange={(e) => handleSelect(e)}>
             <option disabled >All-Types</option>
               {allTypes.map((t) => (
-                <option value={t.name}> {t.name}</option>
+                <option key={t.id} value={t.name}> {t.name}</option>
               ))}
             </select>
           </div>
           {input.types.map((e) => (
             <div className="opciones">
-              <div>
+              <div key={e.id}>
                 <ul>
                   {e}
                   <button type="button" onClick={() => handleDelete(e)}>
