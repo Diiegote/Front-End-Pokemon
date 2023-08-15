@@ -8,7 +8,7 @@ import { BrowserRouter } from 'react-router-dom';
 import store from './Redux/store/index';
 import axios from 'axios'
 // axios.defaults.baseURL="http://localhost:3001";
-axios.defaults.baseURL="https://back-end-pokemon-production.up.railway.app/";
+axios.defaults.baseURL="https://pokemon-ap.onrender.com/";
 
 ReactDOM.render(
   <Provider store={store}>
