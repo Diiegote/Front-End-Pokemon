@@ -15,7 +15,7 @@ export default function Detail() {
   useEffect(() => {
     axios(`pokemon/${id}`)
       .then(response => {
-        setPoke(response.data)
+        setPoke(response.data.data)
       })
   }, [id]);
 

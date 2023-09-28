@@ -25,8 +25,8 @@ export default function Home() {
   const [pokemonsPerPage] = useState(12);
   const indexOfLastPokemons = currentPage * pokemonsPerPage;
   const indexOfFirstPokemons = indexOfLastPokemons - pokemonsPerPage; 
-
-  const currentPokemons = getAllPokemons.slice(
+  // const {data} = getAllPokemons;
+  const currentPokemons = getAllPokemons?.slice(
     indexOfFirstPokemons,
     indexOfLastPokemons
   );
@@ -108,7 +108,7 @@ export default function Home() {
     
       <select defaultValue="AllTypes" onChange={e => handleFilterByType(e)}>
         <option disabled value='AllTypes'>AllTypes</option>
-        {Types.map(t => (
+        {Types?.map(t => (
           
           <option key={t.id} value={t.name}>{t.name}</option>
           ))}
@@ -123,7 +123,7 @@ export default function Home() {
             <div className="container-paginado">
               <Paginado
               pokemonsPerPage={pokemonsPerPage}
-              getAllPokemons={getAllPokemons.length}
+              getAllPokemons={getAllPokemons?.length}
               paginado={paginado}
               paginaActual={currentPage}
             />
@@ -131,7 +131,7 @@ export default function Home() {
 
             <div className="cards-container">
             {
-              currentPokemons.length ?
+              currentPokemons?.length ?
                 currentPokemons?.map(e => {
                   return (
                     <div key={e.id}>
@@ -151,7 +151,7 @@ export default function Home() {
               {  <div className="container-paginado">
               <Paginado
               pokemonsPerPage={pokemonsPerPage}
-              getAllPokemons={getAllPokemons.length}
+              getAllPokemons={getAllPokemons?.length}
               paginado={paginado}
               paginaActual={currentPage}
             />

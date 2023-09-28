@@ -17,7 +17,7 @@ export function getPokemons() {
     let json = await axios.get("/pokemons")
     return dispatch({
       type: GET_POKEMONS,
-      payload: json.data
+      payload: json.data.data
     })
 
   }
